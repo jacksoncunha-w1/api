@@ -5,7 +5,11 @@ const app = express()
 app.use(express.json())
 
 app.get("/alunos", (req, res) => {
-    console.log("Acessando dados da API")
+    res.send("Acessando dados da API")
+})
+
+app.post("/alunos", (req, res) => {
+    res.send("Enviando dados para API")
 })
 
 app.listen(3000, () => {
